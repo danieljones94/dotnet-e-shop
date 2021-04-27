@@ -1,0 +1,7 @@
+﻿@model SweetListViewModel
+
+    <h1>@Model.CurrentCategory</h1>
+    @foreach (var sweet in Model.Sweets)
+            {
+                <partial name="_productCard" model="sweet" />
+            }
