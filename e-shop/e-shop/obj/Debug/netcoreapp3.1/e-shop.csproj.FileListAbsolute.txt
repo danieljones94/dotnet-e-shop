@@ -87,3 +87,4 @@ C:\Users\User\source\repos\dotnet-e-shop\e-shop\e-shop\obj\Debug\netcoreapp3.1\R
 C:\Users\User\source\repos\dotnet-e-shop\e-shop\e-shop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_productCard.cshtml.g.cs
 C:\Users\User\source\repos\dotnet-e-shop\e-shop\e-shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\User\source\repos\dotnet-e-shop\e-shop\e-shop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Carousel.cshtml.g.cs
+C:\Users\User\source\repos\dotnet-e-shop\e-shop\e-shop\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\Index.cshtml.g.cs
