@@ -1,6 +1,9 @@
 ﻿using e_shop.Interfaces;
+using e_shop.Models;
 using e_shop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace e_shop.Controllers
 {
@@ -15,12 +18,24 @@ namespace e_shop.Controllers
             _categoryRespository = categoryRepository;
         }
 
-        public IActionResult List()
+        public ViewResult List(string name)
         {
+
+            IEnumerable<Sweet> sweets;
+            string category;
+
+            if (string.IsNullOrEmpty(name)) {
+                sweets = _sweetRepository.GetAllSweets.OrderBy(o => o.Id);
+                category = "All";
+            } else {
+                sweets = _sweetRepository.GetAllSweets.Where(o => o.Category.Name == name);
+                category = _categoryRespository.GetAllCategories.FirstOrDefault(o => o.Name == name)?.Name;
+            }
+
             var sweetListViewModel = new SweetListViewModel();
 
-            sweetListViewModel.Sweets = _sweetRepository.GetAllSweets;
-            sweetListViewModel.CurrentCategory = "Bestsellers";
+            sweetListViewModel.Sweets = sweets;
+            sweetListViewModel.CurrentCategory = category;
 
             return View(sweetListViewModel);
         }
